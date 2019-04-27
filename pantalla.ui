@@ -1,0 +1,701 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object class="ttk.Frame" id="frmpal">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <layout>
+      <property name="column">0</property>
+      <property name="propagate">True</property>
+      <property name="row">1</property>
+    </layout>
+    <child>
+      <object class="tk.LabelFrame" id="frm1">
+        <property name="cursor">arrow</property>
+        <property name="font">TkDefaultFont</property>
+        <property name="padx">0</property>
+        <property name="pady">0</property>
+        <property name="takefocus">true</property>
+        <property name="text" translatable="yes">Jugador 1</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">nw</property>
+        </layout>
+        <child>
+          <object class="ttk.Labelframe" id="frmpiloto">
+            <property name="height">200</property>
+            <property name="text" translatable="yes">Piloto</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">w</property>
+            </layout>
+            <child>
+              <object class="tk.Label" id="Label_2">
+                <property name="relief">flat</property>
+                <property name="text" translatable="yes">Piloto</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Label" id="Label_3">
+                <property name="relief">flat</property>
+                <property name="text" translatable="yes">Coche</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Listbox" id="lstpiloto">
+                <property name="height">3</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">n</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Listbox" id="lstcoches">
+                <property name="height">3</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">n</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Button" id="Button_1">
+                <property name="text" translatable="yes">Alta piloto</property>
+                <layout>
+                  <property name="column">3</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Button" id="Button_2">
+                <property name="text" translatable="yes">Alta Coche</property>
+                <layout>
+                  <property name="column">3</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Labelframe" id="lfrmconexion">
+            <property name="height">100</property>
+            <property name="text" translatable="yes">conexion mando</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+              <property name="sticky">ne</property>
+            </layout>
+            <child>
+              <object class="tk.Button" id="btnconectar">
+                <property name="command">btnconectarClick</property>
+                <property name="font">TkDefaultFont</property>
+                <property name="takefocus">false</property>
+                <property name="text" translatable="yes">Conectar Wii</property>
+                <property name="underline">0</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Button" id="btndesconectar">
+                <property name="command">onStopClicked</property>
+                <property name="text" translatable="yes">desconectar</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="btnxboxcon">
+                <property name="command">btnXboxconect</property>
+                <property name="compound">top</property>
+                <property name="cursor">arrow</property>
+                <property name="text" translatable="yes">Conectar Xbox</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Label" id="lblconectar">
+                <property name="text" translatable="yes">Label_1</property>
+                <layout>
+                  <property name="column">3</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Label" id="lblledcon">
+                <property name="background">#ff0000</property>
+                <property name="text" translatable="yes">                    </property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Labelframe" id="lfrmtiempo">
+            <property name="height">200</property>
+            <property name="text" translatable="yes">Tiempo</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+            <child>
+              <object class="tk.Button" id="btntiempo">
+                <property name="command">onTimerClicked</property>
+                <property name="font">TkDefaultFont</property>
+                <property name="text" translatable="yes">Inicio</property>
+                <property name="width">6</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="btnparar">
+                <property name="command">onTimerstop</property>
+                <property name="text" translatable="yes">Parar</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="btnborrar">
+                <property name="command">onTimerclear</property>
+                <property name="text" translatable="yes">Borrar</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">e</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Label" id="lbltiempo1">
+                <property name="background">#000000</property>
+                <property name="font">{DS-Digital} 72 {}</property>
+                <property name="foreground">#00ff00</property>
+                <property name="text" translatable="yes">00:00:000</property>
+                <property name="width">10</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Listbox" id="lsttiempos">
+                <property name="height">15</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="lblvuelta1">
+                <property name="background">#000000</property>
+                <property name="font">{DS-Digital} 72 {}</property>
+                <property name="foreground">#00ff00</property>
+                <property name="relief">groove</property>
+                <property name="takefocus">false</property>
+                <property name="text" translatable="yes">00</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">ne</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Labelframe" id="lfrmcontrol">
+            <property name="height">200</property>
+            <property name="text" translatable="yes">Control auto</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">9</property>
+              <property name="sticky">nw</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="lblvel">
+                <property name="text" translatable="yes">00</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">n</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Progressbar" id="pgr1">
+                <property name="cursor">arrow</property>
+                <property name="length">350</property>
+                <property name="maximum">100</property>
+                <property name="mode">determinate</property>
+                <property name="orient">horizontal</property>
+                <property name="style">red.Horizontal.TProgressbar</property>
+                <property name="takefocus">true</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Checkbutton" id="chkauto">
+                <property name="command">chkpilotoautomatico</property>
+                <property name="state">normal</property>
+                <property name="text" translatable="yes">Piloto Automatico</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Scale" id="scale1">
+                <property name="command">on_scale1_changed</property>
+                <property name="from_">0</property>
+                <property name="length">350</property>
+                <property name="orient">horizontal</property>
+                <property name="to">100</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">4</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Checkbutton" id="chkgrabarvuelta">
+                <property name="command">chkgrabarvuelta</property>
+                <property name="offrelief">raised</property>
+                <property name="offvalue">False</property>
+                <property name="onvalue">True</property>
+                <property name="overrelief">ridge</property>
+                <property name="overrelief">ridge</property>
+                <property name="text" translatable="yes">Grabar Vuelta (Back on , B off)</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">e</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Labelframe" id="lfrmcentral">
+        <property name="borderwidth">2</property>
+        <property name="height">300</property>
+        <property name="text" translatable="yes">Control Circuito</property>
+        <property name="underline">2</property>
+        <property name="width">200</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object class="ttk.Checkbutton" id="chkluz">
+            <property name="command">chkluzclick</property>
+            <property name="offvalue">0</property>
+            <property name="onvalue">1</property>
+            <property name="text" translatable="yes">Luces Circuito</property>
+            <property name="variable">int:varLuz</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">8</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="bntpararmusica">
+            <property name="text" translatable="yes">Musica off</property>
+            <layout>
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">9</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Button" id="btnsalir">
+            <property name="command">close</property>
+            <property name="text" translatable="yes">Salir</property>
+            <property name="underline">0</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">9</property>
+              <property name="sticky">w</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Entry" id="txtnvueltas">
+            <property name="text" translatable="yes">5</property>
+            <property name="width">5</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">10</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="Label_1">
+            <property name="text" translatable="yes">Numero de vueltas</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">11</property>
+              <property name="sticky">n</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.LabelFrame" id="frm2">
+        <property name="padx">0</property>
+        <property name="pady">0</property>
+        <property name="takefocus">true</property>
+        <property name="text" translatable="yes">Jugador 1</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">e</property>
+        </layout>
+        <child>
+          <object class="ttk.Labelframe" id="lfrmconexion_1">
+            <property name="height">200</property>
+            <property name="text" translatable="yes">conexion mando</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+            <child>
+              <object class="tk.Button" id="btnconectar_1">
+                <property name="command">btnconectarClick</property>
+                <property name="takefocus">false</property>
+                <property name="text" translatable="yes">Conectar Wii</property>
+                <property name="underline">0</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Button" id="btndesconectar_2">
+                <property name="command">onStopClicked</property>
+                <property name="text" translatable="yes">desconectar</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="btnxboxcon_2">
+                <property name="command">btnXboxconect2</property>
+                <property name="compound">top</property>
+                <property name="cursor">arrow</property>
+                <property name="text" translatable="yes">Conectar Xbox</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Label" id="lblconectar2">
+                <property name="text" translatable="yes">Label_1</property>
+                <layout>
+                  <property name="column">3</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Labelframe" id="lfrmtiempo_2">
+            <property name="height">200</property>
+            <property name="text" translatable="yes">Tiempo</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+            <child>
+              <object class="tk.Button" id="btntiempo_3">
+                <property name="command">onTimerClicked</property>
+                <property name="font">TkDefaultFont</property>
+                <property name="text" translatable="yes">Inicio</property>
+                <property name="width">6</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="btnparar_3">
+                <property name="command">onTimerstop</property>
+                <property name="text" translatable="yes">Parar</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="btnborrar_4">
+                <property name="command">onTimerclear</property>
+                <property name="text" translatable="yes">Borrar</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">e</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Label" id="lbltiempo1_2">
+                <property name="font">{Arial} 48 {bold italic}</property>
+                <property name="foreground">#f90000</property>
+                <property name="relief">groove</property>
+                <property name="text" translatable="yes">00:00:000</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Listbox" id="lsttiempos_1">
+                <property name="height">15</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Label" id="lblvuelta1_1">
+                <property name="font">{Arial} 48 {bold}</property>
+                <property name="foreground">#1b26d9</property>
+                <property name="relief">groove</property>
+                <property name="takefocus">false</property>
+                <property name="text" translatable="yes">0</property>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">ne</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Labelframe" id="lfrmcontrol_3">
+            <property name="height">200</property>
+            <property name="text" translatable="yes">Control auto</property>
+            <property name="width">200</property>
+            <layout>
+              <property name="column">0</property>
+              <property name="propagate">True</property>
+              <property name="row">9</property>
+            </layout>
+            <child>
+              <object class="ttk.Label" id="lblvel_2">
+                <property name="text" translatable="yes">00</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">n</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Progressbar" id="pgr1_1">
+                <property name="cursor">arrow</property>
+                <property name="length">350</property>
+                <property name="maximum">100</property>
+                <property name="mode">determinate</property>
+                <property name="orient">horizontal</property>
+                <property name="style">red.Horizontal.TProgressbar</property>
+                <property name="takefocus">true</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Checkbutton" id="chkauto_1">
+                <property name="command">chkpilotoautomatico</property>
+                <property name="state">normal</property>
+                <property name="text" translatable="yes">Piloto Automatico</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">3</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Scale" id="scale1_1">
+                <property name="command">on_scale1_changed</property>
+                <property name="from_">0</property>
+                <property name="length">350</property>
+                <property name="orient">horizontal</property>
+                <property name="to">100</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="propagate">True</property>
+                  <property name="row">4</property>
+                  <property name="sticky">w</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="pygubu.builder.widgets.dialog" id="dialog_1">
+    <property name="height">100</property>
+    <property name="modal">false</property>
+    <property name="width">200</property>
+    <child>
+      <object class="tk.Label" id="Label_4">
+        <property name="text" translatable="yes">Nombre piloto</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Entry" id="Entry_2">
+        <property name="text" translatable="yes">Entry_2</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="Button_3">
+        <property name="text" translatable="yes">aceptar</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="Button_4">
+        <property name="text" translatable="yes">cancelar</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
